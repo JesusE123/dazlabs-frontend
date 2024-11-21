@@ -1,7 +1,7 @@
 import axios from "axios";
 import { employee } from "../models/employee";
 
-const apiUrl = import.meta.env.VITE_API_URL || "";
+const apiUrl = "https://dazlabs-test-backend-4.onrender.com/api/users";
 
 export const fetchUsers = async () => {
   try {
