@@ -1,7 +1,7 @@
 import { employee } from "../models/employee";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useEffect } from "react";
-import useEditEmploye from "../hooks/useEditEmploye";
+
 
 interface EditEmployeProps {
   showModal: boolean;
@@ -25,9 +25,9 @@ const EditEmployee = ({
 }: EditEmployeProps) => {
   const { register, handleSubmit, setValue } = useForm<Inputs>();
 
-  const { updateEmployee } = useEditEmploye();
+ 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    updateEmployee(data);
+ 
     mutate(data);
     setShowModal(false);
   };
